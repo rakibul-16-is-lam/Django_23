@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap');
+
+*
+
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	border: none;
+	outline: none;
+	scroll-behavior: smooth;
+	font-family: 'Poppins',sans-serif;
+
+}
+ :root{
+ 	--bg-color: #1f242d;
+ 	--second-bg-color: #323946;
+ 	--text-color: #fff;
+ 	--main-color: #0ef;
+ }
+
+ html {
+ 	font-size: 62.5%;
+ 	overflow-x: hidden;
+
+ }
+
+ body{
+ 	background: var(--bg-color);
+ 	color: var(--text-color);
+ }
+
+ section{
+ 	min-height: 100vh;
+ 	padding: 10rem 9%2rem;
+ }
+
+ .header{
+ 	position: fixed;
+ 	top: 0;
+ 	left: 0;
+ 	width:100%;
+ 	padding:2rem 9%;
+ 	background: var(--bg-color);
+ 	display:flex;
+ 	justify-content: space-between;
+ 	align-items: center;
+ 	z-index: 100%;
+ }
+
+.header.sticky{
+    border-bottom: .1rem solid rgba(0, 0, 0, .2);
+}
+
+
+
+ .logo{
+ 	font-size: 2.5rem;
+ 	color: var(--text-color);
+ 	font-weight: 600;
+ 	cursor: default;
+
+ }
+ .menu-icon {
+     font-size: 3.6rem;
+     color: red;
+     display: none;
+ }
+
+ .navber a {
+ 	font-size: 1.7rem;
+ 	color: var(--text-color);
+ 	margin-left: 4rem;
+
+
+ }
+
+ .navber a:hover ,.navber a.active {
+    color: var(--main-color);
+
+ }
+
+
+}
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--second-bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition:.5s ease;
+}
+.btn:hover{
+    box-shadow: none;
+    
+}
+
+.footer{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    padding: 2rem 9%;
+    background: var(--second-bg-color);
+}
+.footer-text p{
+    font-size: 1.6rem;
+
+
+
+}
+.footer-iconTop a{
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding:.8rem;
+    background:var(--main-color);
+    border-radius:.8rem;
+    transition: .5s ease;
+    
+}
+
+
+
+
+
+.footer-iconTop  a i{
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
+    
+}
+.foter-iconTop a:hover{
+    box-shadow: 0 0 1rem var(--main-color);
+
+}
+
+
+
+/*BREAKPOINTS*/
+
+@media(max-width: 1200px){
+    html{
+        font-size: 55%;
+    }
+}
+@media(ma: 991px){
+    .header{
+        padding: 2rem 3%;
+    }
+
+
+    section{
+        padding: 10rem 3% 2rem;
+
+    }
+    .Services{
+        padding-bottom:  7rem;
+    }
+    .Protfoilo{
+        padding-bottom: 7rem;
+
+    }
+
+    .contact{
+        min-height: auto;
+    }
+    .footer{
+        padding: 2rem 3%;
+    }
+}
+@media(max-width: 768px){
+    #menu-icon{
+        display: block;
+    }
+    .navber{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding:1rem 3% ;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
+
+
+    }
+
+    .navber.active{
+        display: block;
+    }
+
+    .navber a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    .home {
+        flex-direction: column;
+    }
+    .home-content h3{
+        font-size:  2.5rem;
+
+    }
+    .home-content h1 {
+        font-size: 5rem;
+    }
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+
+    }
+    .about{
+        flex-direction: column-reverse;
+
+    }
+    .about-img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+    .Services h2{
+        margin-bottom:3rem;
+
+    }
+    .Protfoilo h2{
+        margin-bottom: 3rem;
+
+    }
+    .Protfoilo-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+        @media(max-width: 617px){
+            .Protfoilo-container{
+                grid-template-columns: 1fr;
+            }
+
+
+        }
+                @media(max-width: 450px){
+                    html{
+                        font-size: 50%;
+                    }
+                }
+                .contact form .input-box input{
+                    width: 100%;
+                }
+                 @media(max-width: 365px){
+                    .home-img{
+                        width: 90vw;
+                    }
+                    .about-img img{
+                        width: 90vw;
+                    }
+                 }
+                
+
+}
